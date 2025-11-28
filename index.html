@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Private Messenger</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="shield-icon">🛡️</span>
+                    <div>
+                        <h1>Secure Private Messenger</h1>
+                        <p>End-to-end encrypted • You control the data</p>
+                    </div>
+                </div>
+                <div id="status" class="status locked">
+                    <span class="status-icon">🔒</span>
+                    <span class="status-text">Locked</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-container">
+            <aside class="sidebar">
+                <div class="panel">
+                    <h2>🔑 Your Keys</h2>
+                    <div id="keyPanel">
+                        <button id="generateKeysBtn" class="btn btn-primary">Generate Keys</button>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h2>👤 Recipient's Public Key</h2>
+                    <textarea id="recipientKey" placeholder="Paste recipient's public key here..." rows="6"></textarea>
+                </div>
+
+                <div class="panel">
+                    <h2>📥 Receive Encrypted Message</h2>
+                    <textarea id="receiveInput" placeholder="Paste encrypted message here..." rows="4"></textarea>
+                    <button id="receiveBtn" class="btn btn-secondary">Decrypt & Add</button>
+                </div>
+
+                <div class="panel">
+                    <button id="exportBtn" class="btn btn-secondary" disabled>📦 Export Conversation</button>
+                </div>
+            </aside>
+
+            <main class="messages-area">
+                <div class="messages-header">
+                    <h2>💬 Messages</h2>
+                </div>
+                <div id="messagesContainer" class="messages-container">
+                    <div class="empty-state">
+                        <span class="lock-icon">🔒</span>
+                        <p>No messages yet. Generate keys to start secure communication.</p>
+                    </div>
+                </div>
+                <div class="message-input-area">
+                    <input type="text" id="messageInput" placeholder="Type your message..." disabled>
+                    <button id="sendBtn" class="btn btn-primary" disabled>📤 Send</button>
+                </div>
+            </main>
+        </div>
+
+        <footer class="security-info">
+            <h3>🔒 Security Features</h3>
+            <ul>
+                <li>2048-bit RSA encryption with OAEP padding</li>
+                <li>End-to-end encryption - messages encrypted on your device</li>
+                <li>All data stored locally in memory - you control everything</li>
+                <li>No third-party servers - exchange keys directly with recipients</li>
+                <li>Private keys never leave your device</li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="js/crypto.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
