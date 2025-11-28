@@ -1,0 +1,22 @@
+SECURE PRIVATE MESSENGER - SECURITY INFORMATION
+
+ENCRYPTION DETAILS:
+- Algorithm: RSA-OAEP
+- Key Size: 2048 bits
+- Hash Function: SHA-256
+- Implementation: Web Crypto API
+
+SECURITY FEATURES:
+1. End-to-End Encryption
+2. Private keys never leave device
+3. No server-side processing
+4. No data persistence
+
+BEST PRACTICES:
+1. Exchange keys through trusted channels
+2. Verify key fingerprints
+3. Export conversations regularly
+4. Use on trusted devices only
+
+For educational and personal use.
+Last Updated: 2024
