@@ -1,7 +1,4 @@
 {
-  "name": "mern-chat-app",
-  "version": "1.0.0",
-  "description": "Private chat app with MERN stack and WebSockets",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,16 +9,13 @@
     "node": ">=18.0.0"
   },
   "keywords": [
-    "mern",
-    "chat",
-    "websocket",
-    "real-time",
-    "messaging"
+    "mern"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.0",
+    "ws": "^8.14.2",
     "socket.io": "^4.8.0",
     "mongoose": "^8.0.0",
     "bcryptjs": "^2.4.3",
@@ -38,5 +32,4 @@
     "nodemon": "^3.0.0"
   }
 }
-
 
